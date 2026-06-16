@@ -1,0 +1,24 @@
+{
+  "name": "electron-notifications-osx",
+  "version": "1.0.0",
+  "description": "A minimal Electron application with OSX Notifications",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "sign:dev": "codesign --force --deep --sign \"Electron Dev\" node_modules/electron/dist/Electron.app",
+    "postinstall": "node -e \"process.platform==='darwin' && require('child_process').execSync('npm run sign:dev', {stdio: 'inherit'})\""
+  },
+  "repository": "https://github.com/JohnJunior/electron-notifications-osx",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "Alex Trukhnii",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^42.4.0"
+  }
+}

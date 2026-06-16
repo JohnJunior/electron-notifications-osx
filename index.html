@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.
+
+    <section id="notification-tester">
+      <h2>Notification tester</h2>
+      <p class="hint">
+        On Electron 42+, macOS uses the UNNotification API and requires the app
+        to be <strong>code-signed</strong>. Unsigned builds (e.g. <code>npm start</code>)
+        emit a <code>failed</code> event instead of showing the banner — watch
+        the history below for it.
+      </p>
+      <label>Title <input id="notif-title" type="text" value="Electron 42 notification"></label>
+      <label>Body <input id="notif-body" type="text" value="Testing the UNNotification API on macOS."></label>
+      <label><input id="notif-silent" type="checkbox"> Silent</label>
+      <button id="send-notification" type="button">Send notification</button>
+
+      <h3>History</h3>
+      <ul id="notification-history"></ul>
+    </section>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>

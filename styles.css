@@ -1,0 +1,67 @@
+/* styles.css */
+
+/* Add styles here to customize the appearance of your app */
+
+body {
+  font-family: -apple-system, system-ui, sans-serif;
+  margin: 1.5rem;
+}
+
+#notification-tester {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  max-width: 600px;
+}
+
+#notification-tester .hint {
+  font-size: 0.85rem;
+  color: #555;
+  background: #f5f5f5;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+#notification-tester label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+#notification-tester input[type="text"] {
+  width: 100%;
+  padding: 0.35rem;
+  box-sizing: border-box;
+}
+
+#send-notification {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+#notification-history {
+  list-style: none;
+  padding: 0;
+}
+
+#notification-history li {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+#notification-history .notif-title {
+  font-weight: 600;
+}
+
+#notification-history .notif-meta {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+#notification-history .empty {
+  color: #999;
+  border-style: dashed;
+}
